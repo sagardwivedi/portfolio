@@ -1,11 +1,12 @@
-import Container from "@/components/Container";
+import Back from "@/components/back-button";
 import Typewriter from "@/components/type-writer";
 
 const page = () => {
   return (
-    <Container>
+    <div>
+      <Back />
       <Typewriter text="Comming Sonn....." />
-    </Container>
+    </div>
   );
 };
 

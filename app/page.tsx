@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Home = () => {
   return (
-    <Container>
+    <>
       <div className="flex flex-col items-center gap-y-5">
         <Avatar className="w-40 border-4 border-primary-foreground h-40">
           <AvatarImage
@@ -17,13 +17,13 @@ const Home = () => {
           <AvatarFallback>SD</AvatarFallback>
         </Avatar>
         <Typewriter
-          delay={100}
+          delay={200}
           text="Sagar Dwivedi"
           className="text-3xl uppercase"
         />
       </div>
       <Typewriter
-        delay={100}
+        delay={200}
         text="Web Developer"
         className="text-xl uppercase"
       />
@@ -39,11 +39,8 @@ const Home = () => {
           <Link href={"/blog"}>Blog</Link>
         </Button>
       </div>
-      <div className="absolute top-4 right-4 flex flex-row gap-x-2 items-center">
-        <p>Theme</p>
-        <ModeToggle />
-      </div>
-    </Container>
+
+    </>
   );
 };
 

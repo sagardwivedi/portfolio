@@ -1,7 +1,12 @@
-import Container from "@/components/Container";
+import Back from "@/components/back-button";
 
 const page = () => {
-  return <Container>Projects</Container>;
+  return (
+    <>
+      <Back />
+      <h1>Project</h1>
+    </>
+  );
 };
 
 export default page;
