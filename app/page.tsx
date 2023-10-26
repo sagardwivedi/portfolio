@@ -1,5 +1,3 @@
-import Container from "@/components/Container";
-import { ModeToggle } from "@/components/theme/theme-toogle";
 import Typewriter from "@/components/type-writer";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -16,18 +14,9 @@ const Home = () => {
           />
           <AvatarFallback>SD</AvatarFallback>
         </Avatar>
-        <Typewriter
-          delay={200}
-          text="Sagar Dwivedi"
-          className="text-3xl uppercase"
-        />
+        <Typewriter text="Sagar Dwivedi" className="text-3xl" />
       </div>
-      <Typewriter
-        delay={200}
-        text="Web Developer"
-        className="text-xl uppercase"
-      />
-
+      <Typewriter text="Full Stack Developer" className="text-xl " />
       <div className="flex flex-col max-md:gap-y-5 md:flex-row gap-x-10 mt-10">
         <Button asChild variant={"outline"}>
           <Link href={"/projects"}>Projects</Link>
@@ -36,10 +25,12 @@ const Home = () => {
           <Link href={"/me"}>About Me</Link>
         </Button>
         <Button asChild variant={"outline"}>
+          <Link href={"/contact"}>Contact Me</Link>
+        </Button>
+        <Button asChild variant={"outline"}>
           <Link href={"/blog"}>Blog</Link>
         </Button>
       </div>
-
     </>
   );
 };
