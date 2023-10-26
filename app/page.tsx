@@ -28,7 +28,7 @@ const Home = () => {
         className="text-xl uppercase"
       />
 
-      <div className="flex flex-row gap-x-10 mt-10">
+      <div className="flex flex-col md:flex-row gap-x-10 mt-10">
         <Button asChild variant={"outline"}>
           <Link href={"/projects"}>Projects</Link>
         </Button>
