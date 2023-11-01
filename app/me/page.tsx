@@ -31,18 +31,18 @@ const page = () => {
                 Who I Am:
               </p>
               <div>
-                I&apos;m a passionate explorer of the digital realm, eager to master
-                the art of creating web applications that are not only
+                I&apos;m a passionate explorer of the digital realm, eager to
+                master the art of creating web applications that are not only
                 functional but elegant. My journey has led me to acquire skills
-                in{" "}
+                in
                 <Badge className="rounded text-secondary-foreground">
                   <Next />
                 </Badge>
-                ,{" "}
+                ,
                 <Badge className="rounded text-secondary-foreground">
                   <ReactLogo />
                 </Badge>
-                ,{" "}
+                ,
                 <Badge className="rounded text-secondary-foreground">
                   <TailwindCSSLogo />
                 </Badge>
@@ -55,43 +55,43 @@ const page = () => {
                 What Drives Me:
               </p>
               <p>
-                I&apos;m driven by the endless possibilities of the digital world.
-                Every line of code I write is an opportunity to turn innovative
-                ideas into tangible solutions. My work is a reflection of my
-                commitment to creating efficient and user-friendly web
-                applications.
+                I&apos;m driven by the endless possibilities of the digital
+                world. Every line of code I write is an opportunity to turn
+                innovative ideas into tangible solutions. My work is a
+                reflection of my commitment to creating efficient and
+                user-friendly web applications.
               </p>
             </article>
             <article className="mb-3 leading-relaxed">
               <p className="font-semibold mb-2 text-xl dark:text-primary text-secondary-foreground">
                 Why Choose Me:
               </p>
-              <ul className="space-y-2">
-                <li>
-                  <span className="underline font-medium font-serif">
+              <ul className="space-y-2 list-disc">
+                <li className="ml-10">
+                  <span className="dark:text-primary block font-medium font-serif">
                     Eagerness to Learn:
-                  </span>{" "}
+                  </span>
                   I approach every challenge with enthusiasm and a strong
                   willingness to learn and improve.
                 </li>
-                <li>
-                  <span className="underline font-medium font-serif">
+                <li className="ml-10">
+                  <span className="dark:text-primary font-medium block font-serif">
                     Tech Skills:
-                  </span>{" "}
+                  </span>
                   I bring proficiency in Next.js, React.js, Tailwind CSS,
                   Python, Node.js, and FastAPI to the table.
                 </li>
-                <li>
-                  <span className="underline font-medium font-serif">
+                <li className="ml-10">
+                  <span className="dark:text-primary font-medium block font-serif">
                     Problem-Solving Mindset:
-                  </span>{" "}
+                  </span>
                   I tackle coding challenges with a creative and analytical
                   approach, always seeking the best solutions.
                 </li>
-                <li>
-                  <span className="underline font-medium font-serif">
+                <li className="ml-10">
+                  <span className="dark:text-primary font-medium block font-serif">
                     Passion for Web Development:
-                  </span>{" "}
+                  </span>
                   My enthusiasm for web development fuels my continuous quest
                   for excellence.
                 </li>
@@ -102,10 +102,11 @@ const page = () => {
                 Let&apos;s Collaborate:
               </p>
               <p>
-                I&apos;m eager to connect with industry professionals, mentors, and
-                potential collaborators. Whether you have a project idea, a
+                I&apos;m eager to connect with industry professionals, mentors,
+                and potential collaborators. Whether you have a project idea, a
                 question, or just want to explore the vast possibilities of the
-                digital world, please don&apos;t hesitate to get in touch through{" "}
+                digital world, please don&apos;t hesitate to get in touch
+                through
                 <Link className="underline " href={"/contact"}>
                   Contact Me
                 </Link>
