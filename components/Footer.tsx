@@ -1,23 +1,10 @@
-import { navs } from "@/lib/constantData";
-import Link from "next/link";
-import { Button } from "./ui/button";
-
 export function Footer() {
   return (
-    <header className="mt-6 flex flex-row items-center justify-between rounded-sm border bg-white py-2 shadow-sm dark:border-secondary dark:bg-neutral-900 dark:shadow-xl">
-      <div></div>
-      <div className="flex flex-row">
-        {navs.map((nav, index) => (
-          <Button
-            key={index}
-            className="font-sans text-base"
-            asChild
-            variant={"link"}
-          >
-            <Link href={nav.href}>{nav.text}</Link>
-          </Button>
-        ))}
+    <footer className="base mt-6 py-4">
+      <div className="flex flex-row items-center justify-between px-6">
+        <p>Created By: Sagar Dwivedi</p>
+        <div></div>
       </div>
-    </header>
+    </footer>
   );
 }

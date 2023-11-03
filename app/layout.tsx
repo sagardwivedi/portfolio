@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 
-import { ThemeProvider } from "@/components/theme/theme-provider";
-import { cn } from "@/lib/utils";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 import "./globals.css";
-import Container from "@/components/Container";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -21,21 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          "min-h-screen bg-background dark:bg-background font-sans antialiased",
-          fontSans.variable
-        )}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Container>{children}</Container>
-        </ThemeProvider>
+    <html lang="en">
+      <body className={fontSans.variable}>
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

@@ -1,11 +1,8 @@
-import Back from "@/components/back-button";
-
 const page = () => {
   return (
-    <>
-      <Back />
+    <div className="base p-8 text-center">
       <h1>Project</h1>
-    </>
+    </div>
   );
 };
 

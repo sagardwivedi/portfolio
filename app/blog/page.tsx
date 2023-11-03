@@ -1,11 +1,9 @@
-import Back from "@/components/back-button";
 import Typewriter from "@/components/type-writer";
 
 const page = () => {
   return (
-    <div>
-      <Back />
-      <Typewriter text="Comming Sonn....." />
+    <div className="base p-8 text-center">
+      <Typewriter text="Work in progress" />
     </div>
   );
 };

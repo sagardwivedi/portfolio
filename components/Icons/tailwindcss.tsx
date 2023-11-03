@@ -1,6 +1,6 @@
 const TailwindCSSLogo = () => {
   return (
-    <svg viewBox="0 0 248 31" className="text-white dark:text-black w-auto h-5">
+    <svg viewBox="0 0 248 31" className="h-5 w-auto text-white dark:text-black">
       <path
         fillRule="evenodd"
         clipRule="evenodd"

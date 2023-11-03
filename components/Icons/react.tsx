@@ -6,7 +6,7 @@ const ReactLogo = () => {
       viewBox="-10.5 -9.45 21 18.9"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="text-sm me-0 w-10 h-10 text-black flex origin-center transition-all ease-in-out"
+      className="me-0 flex h-10 w-10 origin-center text-sm text-black transition-all ease-in-out"
     >
       <circle cx="0" cy="0" r="2" fill="currentColor"></circle>
       <g stroke="currentColor" strokeWidth="1" fill="none">
