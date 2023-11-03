@@ -32,7 +32,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background p-6 font-sans text-white antialiased;
+    @apply bg-background p-3 md:p-6 font-sans text-white antialiased;
   }
 }
 
