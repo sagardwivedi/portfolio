@@ -23,16 +23,16 @@ export default function ProjectDetails({ params }: { params: { id: string } }) {
         alt={`${project.title}`}
         width={1220}
         height={931}
-        priority
-        className="w-auto h-auto drop-shadow-md rounded-md"
+        loading="lazy"
+        className="rounded-md drop-shadow-md"
       />
-      <div className="space-y-5 flex flex-col md:flex-row justify-between items-start">
+      <div className="flex flex-col items-start justify-between space-y-5 md:flex-row">
         <div>
           <div className="mt-5 space-y-1">
-            <h1 className="text-2xl md:text-4xl font-sans">{project.title}</h1>
+            <h1 className="font-sans text-2xl md:text-4xl">{project.title}</h1>
             <p>{project.description}</p>
           </div>
-          <div className="flex mt-3 flex-row gap-2 items-center flex-wrap">
+          <div className="mt-3 flex flex-row flex-wrap items-center gap-2">
             {project.techStack.map((tech) => (
               <Badge key={tech} variant={"secondary"}>
                 {tech}
@@ -40,7 +40,7 @@ export default function ProjectDetails({ params }: { params: { id: string } }) {
             ))}
           </div>
         </div>
-        <div className="flex max-md:gap-y-5 md:items-center gap-x-4 flex-col md:flex-row">
+        <div className="flex flex-col gap-x-4 max-md:gap-y-5 md:flex-row md:items-center">
           <Button asChild variant={"default"}>
             <div className="space-x-2">
               <Link
@@ -50,7 +50,7 @@ export default function ProjectDetails({ params }: { params: { id: string } }) {
               >
                 Live
               </Link>
-              <ArrowRightIcon className="w-5 h-5" />
+              <ArrowRightIcon className="h-5 w-5" />
             </div>
           </Button>
           <Button asChild variant={"secondary"}>
@@ -62,7 +62,7 @@ export default function ProjectDetails({ params }: { params: { id: string } }) {
               >
                 GitHub
               </Link>
-              <ArrowRightIcon className="w-5 h-5" />
+              <ArrowRightIcon className="h-5 w-5" />
             </div>
           </Button>
         </div>
