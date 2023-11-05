@@ -20,9 +20,10 @@ export function ProjectCard({
         <Image
           src={prevImage}
           alt={title}
-          width={500}
+          width={1920}
           height={931}
-          loading="lazy"
+          priority
+          className="object-contain"
         />
         <div className="absolute bottom-0 right-0 translate-y-2 transition-transform duration-100 ease-linear md:invisible md:group-hover:visible md:group-hover:-translate-y-2">
           <Button size={"icon"} asChild className="h-12 w-12 rounded-full">
