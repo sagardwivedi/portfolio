@@ -21,7 +21,7 @@ export default function ProjectDetails({ params }: { params: { id: string } }) {
       <Image
         src={project.prevImage}
         alt={`${project.title}`}
-        width={1220}
+        width={1920}
         height={931}
         loading="lazy"
         className="rounded-md drop-shadow-md"
