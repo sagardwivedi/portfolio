@@ -35,13 +35,13 @@ export function Header() {
       >
         <HamburgerMenuIcon className="h-6 w-6" />
       </Button>
-      {isOpen ? <div className="absolute inset-0 z-40 bg-black/50" /> : null}
+      {isOpen ? <div className="absolute inset-0 min-h-screen z-40 bg-black/50" /> : null}
       <div
         className={cn(
           isOpen
             ? "block duration-300 ease-in animate-in fade-in-0 slide-in-from-top-10"
             : "invisible duration-300 ease-out animate-out fade-out-0 slide-out-to-top-10",
-          "base absolute inset-x-0 top-0 z-50 m-6 h-auto items-center justify-center p-5",
+          "base absolute inset-x-0 top-0 z-50 m-4 h-auto items-center justify-center p-5"
         )}
       >
         <div className="flex flex-col">
