@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import Back from "@/components/BackButton";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { getProjectById } from "@/lib/utils";
-import Back from "@/components/BackButton";
 
 export default function ProjectDetails({ params }: { params: { id: string } }) {
   const project = getProjectById(params.id);
@@ -21,10 +21,10 @@ export default function ProjectDetails({ params }: { params: { id: string } }) {
       <Image
         src={project.prevImage}
         alt={`${project.title}`}
-        width={1920}
+        width={1747}
         height={931}
-        loading="lazy"
-        className="rounded-md drop-shadow-md"
+        priority
+        className="rounded-md object-contain drop-shadow-md"
       />
       <div className="flex flex-col items-start justify-between space-y-5 md:flex-row">
         <div>

@@ -20,13 +20,12 @@ export function ProjectCard({
         <Image
           src={prevImage}
           alt={title}
-          width={1920}
-          height={931}
+          width={300}
+          height={240}
           priority
-          className="object-contain"
         />
         <div className="absolute bottom-0 right-0 translate-y-2 transition-transform duration-100 ease-linear md:invisible md:group-hover:visible md:group-hover:-translate-y-2">
-          <Button size={"icon"} asChild className="h-12 w-12 rounded-full">
+          <Button aria-label="nav-button" size={"icon"} asChild className="h-12 w-12 rounded-full">
             <Link href={`/projects/${id}`}>
               <ArrowRightIcon className="h-6 w-6" />
             </Link>

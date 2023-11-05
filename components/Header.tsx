@@ -32,6 +32,7 @@ export function Header() {
         size={"icon"}
         variant={"outline"}
         className="rounded md:hidden"
+        aria-label="Menu Button"
       >
         <HamburgerMenuIcon className="h-6 w-6" />
       </Button>
