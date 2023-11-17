@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import "./globals.css";
 
-export const fontSans = FontSans({
+const sans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={fontSans.variable}>
+      <body className={sans.variable}>
         <Header />
         <main>{children}</main>
         <Footer />
