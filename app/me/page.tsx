@@ -1,8 +1,3 @@
-import Link from "next/link";
-
-import Next from "@/components/Icons/next";
-import ReactLogo from "@/components/Icons/react";
-import TailwindCSSLogo from "@/components/Icons/tailwindcss";
 import { Badge } from "@/components/ui/badge";
 
 const page = () => {
@@ -37,19 +32,10 @@ const page = () => {
                   master the art of creating web applications that are not only
                   functional but elegant. My journey has led me to acquire
                   skills in
-                  <Badge className="rounded">
-                    <Next />
-                  </Badge>
-                  ,
-                  <Badge className="rounded">
-                    <ReactLogo />
-                  </Badge>
-                  ,
-                  <Badge className="rounded">
-                    <TailwindCSSLogo />
-                  </Badge>
-                  , <Badge>Python</Badge>, <Badge>Node.js</Badge>, and FastAPI,
-                  and I&apos;m dedicated to expanding my knowledge.
+                  <Badge className="ml-1">NextJS</Badge>,<Badge>ReactJS</Badge>,
+                  <Badge>TailwindCSS</Badge>,<Badge>Python</Badge>,
+                  <Badge>Node.js</Badge>, and <Badge>FastAPI</Badge>, and
+                  I&apos;m dedicated to expanding my knowledge.
                 </div>
               </article>
               <article className="mb-3 leading-relaxed">
@@ -109,11 +95,8 @@ const page = () => {
                   mentors, and potential collaborators. Whether you have a
                   project idea, a question, or just want to explore the vast
                   possibilities of the digital world, please don&apos;t hesitate
-                  to get in touch through
-                  <Link className="underline " href={"/contact"}>
-                    Contact Me
-                  </Link>
-                  . Let&apos;s embark on this learning journey together.
+                  to get in touch. Let&apos;s embark on this learning journey
+                  together.
                 </p>
               </article>
               <article className="mb-3 leading-relaxed">
@@ -122,7 +105,7 @@ const page = () => {
                 </p>
                 <p>
                   When I&apos;m not immersed in the world of code, you can find
-                  me [Your Hobbies/Interests Outside of Development]. A
+                  me reading manga, lightnovels and watching anime. A
                   well-rounded life keeps me inspired and creative.
                 </p>
               </article>

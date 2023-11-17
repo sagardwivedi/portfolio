@@ -40,7 +40,7 @@ export default function ProjectDetails({ params }: { params: { id: string } }) {
             ))}
           </div>
         </div>
-        <div className="flex gap-x-4 flex-row items-center">
+        <div className="flex flex-row items-center gap-x-4">
           <Button asChild variant={"default"}>
             <div className="space-x-2">
               <Link

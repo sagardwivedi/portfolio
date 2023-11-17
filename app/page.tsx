@@ -11,8 +11,11 @@ const Home = () => {
         />
         <AvatarFallback>SD</AvatarFallback>
       </Avatar>
-      <Typewriter text="Sagar Dwivedi" className="text-3xl" />
-      <Typewriter text="Full Stack Developer" className="text-xl " />
+      <h1 className="text-3xl mb-1 text-primary">Sagar Dwivedi</h1>
+      <Typewriter
+        text="Full Stack Developer"
+        className="text-xl text-secondary-foreground"
+      />
     </div>
   );
 };

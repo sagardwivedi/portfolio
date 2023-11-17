@@ -17,15 +17,14 @@ export function ProjectCard({
   return (
     <div className="group h-[400px] w-[300px] cursor-pointer justify-normal rounded-md bg-black p-3">
       <div className="relative h-[60%] w-full">
-        <Image
-          src={prevImage}
-          alt={title}
-          width={300}
-          height={240}
-          priority
-        />
+        <Image src={prevImage} alt={title} width={300} height={240} priority />
         <div className="absolute bottom-0 right-0 translate-y-2 transition-transform duration-100 ease-linear md:invisible md:group-hover:visible md:group-hover:-translate-y-2">
-          <Button aria-label="nav-button" size={"icon"} asChild className="h-12 w-12 rounded-full">
+          <Button
+            aria-label="nav-button"
+            size={"icon"}
+            asChild
+            className="h-12 w-12 rounded-full"
+          >
             <Link href={`/projects/${id}`}>
               <ArrowRightIcon className="h-6 w-6" />
             </Link>
