@@ -11,7 +11,7 @@ const Home = () => {
         />
         <AvatarFallback>SD</AvatarFallback>
       </Avatar>
-      <h1 className="text-3xl mb-1 text-primary">Sagar Dwivedi</h1>
+      <h1 className="mb-1 text-3xl text-primary">Sagar Dwivedi</h1>
       <Typewriter
         text="Full Stack Developer"
         className="text-xl text-secondary-foreground"

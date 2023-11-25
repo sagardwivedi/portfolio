@@ -9,7 +9,7 @@ export function Footer() {
         <p>Created By: Sagar Dwivedi</p>
         <Button asChild variant={"ghost"} size={"icon"}>
           <Link href={"https://github.com/sagardwivedi"}>
-            <GitHubLogoIcon className="w-7 h-7" />
+            <GitHubLogoIcon className="h-7 w-7" />
           </Link>
         </Button>
       </div>
