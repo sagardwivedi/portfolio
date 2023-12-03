@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import Back from "@/components/BackButton";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { getProjectById } from "@/lib/utils";
+import { getProjectById, getProjects } from "@/lib/utils";
 
 export default function ProjectDetails({ params }: { params: { id: string } }) {
   const project = getProjectById(params.id);

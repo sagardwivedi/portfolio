@@ -10,3 +10,7 @@ export function cn(...inputs: ClassValue[]) {
 export function getProjectById(id: string): Project | undefined {
   return projects.find((project) => project.id.toString() === id);
 }
+
+export function getProjects(): Project[] {
+  return projects
+}
