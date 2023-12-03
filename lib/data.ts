@@ -1,7 +1,7 @@
 import { Route } from "next";
 
 export interface Project {
-  id: number;
+  id: string;
   title: string;
   description: string;
   prevImage: string;
@@ -13,7 +13,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 1,
+    id: "1",
     title: "DevJunction",
     description: "A fully-functional link-sharing app for developers!",
     prevImage: "/devjunction.png",
@@ -23,7 +23,7 @@ export const projects: Project[] = [
     status: "WIP",
   },
   {
-    id: 2,
+    id: "2",
     title: "Huddle",
     description: "A landing page with a single introductory section",
     prevImage: "/huddle.png",
