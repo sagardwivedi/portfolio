@@ -33,7 +33,7 @@ export function HeaderMobile() {
           isOpen
             ? `block duration-300 ease-in animate-in fade-in-0 slide-in-from-top-10`
             : `invisible duration-300 ease-out animate-out fade-out-0 slide-out-to-top-10`,
-          "base absolute inset-x-0 top-0 z-50 m-4 h-auto items-center justify-center p-5"
+          "base absolute inset-x-0 top-0 z-50 m-4 h-auto items-center justify-center p-5",
         )}
       >
         <div className="flex flex-col">
