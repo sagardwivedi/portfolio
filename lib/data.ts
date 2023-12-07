@@ -14,6 +14,16 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "1",
+    title: "TaskVista",
+    description: "My take on kanban style task management app.",
+    prevImage: "/taskvista.png",
+    techStack: ["NextJS", "Supabase", "TailwidCSS"],
+    demoLink: "https://taskvista.vercel.app/",
+    gitRepo: "https://github.com/sagardwivedi/kanban",
+    status: "WIP",
+  },
+  {
+    id: "2",
     title: "DevJunction",
     description: "A fully-functional link-sharing app for developers!",
     prevImage: "/devjunction.png",
@@ -23,7 +33,7 @@ export const projects: Project[] = [
     status: "WIP",
   },
   {
-    id: "2",
+    id: "3",
     title: "Huddle",
     description: "A landing page with a single introductory section",
     prevImage: "/huddle.png",

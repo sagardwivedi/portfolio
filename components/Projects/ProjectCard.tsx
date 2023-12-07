@@ -2,48 +2,66 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
 import { Project } from "@/lib/data";
 import { Badge } from "../ui/badge";
+import { Button } from "../ui/button";
 
 export function ProjectCard({
   description,
-  id,
   title,
   prevImage,
   techStack,
   status,
-}: Omit<Project, "demoLink" | "gitRepo">) {
+  demoLink,
+  gitRepo,
+}: Project) {
   return (
-    <div className="group h-[400px] w-[300px] cursor-pointer justify-normal rounded-md bg-black p-3">
-      <div className="relative h-[60%] w-full">
-        <Image src={prevImage} alt={title} width={300} height={240} priority />
-        <div className="absolute bottom-0 right-0 translate-y-2 transition-transform duration-100 ease-linear md:invisible md:group-hover:visible md:group-hover:-translate-y-2">
+    <div className="flex flex-col rounded-md overflow-hidden bg-black">
+      <Image
+        src={prevImage}
+        alt={title}
+        priority
+        width={700}
+        className="rounded-md"
+        height={700}
+      />
+      <div className="flex flex-row items-center flex-wrap justify-between p-5">
+        <div>
+          <div className="flex flex-row items-center gap-2">
+            <h2 className="text-primary font-semibold md:text-3xl text-xl">
+              {title}
+            </h2>
+            {status && <Badge variant={"outline"}>{status}</Badge>}
+          </div>
+          <p className="text-secondary-foreground">{description}</p>
+          <div className="flex flex-row flex-wrap gap-2 mt-2">
+            {techStack.map((i) => (
+              <Badge key={i}>{i}</Badge>
+            ))}
+          </div>
+        </div>
+        <div className="flex mt-5 gap-4">
           <Button
-            aria-label="nav-button"
-            size={"icon"}
+            className="group bg-secondary text-secondary-foreground"
             asChild
-            className="h-12 w-12 rounded-full"
+            variant={"link"}
           >
-            <Link href={`/projects/${id}`}>
-              <ArrowRightIcon className="h-6 w-6" />
+            <Link href={demoLink}>
+              Live
+              <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </Button>
+          <Button
+            className="group bg-primary text-primary-foreground"
+            asChild
+            variant={"link"}
+          >
+            <Link href={gitRepo}>
+              Github
+              <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
         </div>
-      </div>
-      <div className="relative">
-        <h3 className="text-lg font-bold">{title}</h3>
-        <p className="text-sm">{description}</p>
-        <div className="mt-3 flex flex-row flex-wrap items-center gap-2">
-          {techStack.map((tech) => (
-            <Badge key={tech}>{tech}</Badge>
-          ))}
-        </div>
-        {status ? (
-          <Badge className="absolute right-4" variant={"outline"}>
-            {status}
-          </Badge>
-        ) : null}
       </div>
     </div>
   );

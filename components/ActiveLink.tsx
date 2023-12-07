@@ -20,8 +20,8 @@ export default function ActiveLink({ href, text }: ActiveLinkProps) {
     <Link
       href={href}
       className={cn(
-        isActive ? "bg-primary block p-2 text-white rounded-[4px]" : "p-2",
-        "transition-colors duration-300"
+        isActive ? "bg-primary text-primary-foreground" : "",
+        "transition-colors duration-300 rounded-full p-2",
       )}
       aria-current={isActive ? "page" : undefined}
     >
