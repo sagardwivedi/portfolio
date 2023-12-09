@@ -1,9 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    webVitalsAttribution: ["CLS", "LCP"],
-    typedRoutes: true,
+
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+        port: "",
+      },
+    ],
   },
 };
-
-module.exports = nextConfig;
