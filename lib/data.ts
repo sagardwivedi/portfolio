@@ -42,4 +42,13 @@ export const projects: Project[] = [
     gitRepo:
       "https://github.com/sagardwivedi/FrontendMentor/tree/master/huddle_landing_intro",
   },
+  {
+    id: "4",
+    title: "FQuiz",
+    description: "A Frontend Quizz App",
+    prevImage: "/fquizz.png",
+    techStack: ["NextJS", "TailwindCSS", "shadcn/ui", "zustand"],
+    demoLink: "https://fquiz-eight.vercel.app/",
+    gitRepo: "https://github.com/sagardwivedi/f-quiz",
+  },
 ];

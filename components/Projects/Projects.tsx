@@ -3,7 +3,7 @@ import { ProjectCard } from "./ProjectCard";
 
 export default function Projects() {
   return (
-    <div className="flex max-md:flex-col flex-row items-center divide-y gap-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
       {projects.map((project) => (
         <ProjectCard key={project.id} {...project} />
       ))}

@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    webVitalsAttribution: ["CLS", "LCP"],
-    typedRoutes: true,
-  },
+  experimental: {},
 };
 
 module.exports = nextConfig;
