@@ -1,8 +1,13 @@
-import Typewriter from "@/components/type-writer";
+import Typewriter from '@/components/type-writer';
+import { type Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog',
+};
 
 const page = () => {
   return (
-    <div className="base p-8 text-center">
+    <div className="p-8 text-center">
       <Typewriter text="Work in progress" />
     </div>
   );

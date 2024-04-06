@@ -1,44 +1,46 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "private": true,
+  "author": {
+    "name": "Sagar Dwivedi",
+    "email": "sagar.dw20@gmil.com"
+  },
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev -p 3030 --turbo",
+    "lint": "next lint",
+    "prepare": "husky",
+    "prettier": "prettier --write --ignore-unknown .",
+    "prettier:check": "prettier --check --ignore-unknown .",
+    "start": "next start -p 3030"
+  },
   "dependencies": {
-    "@heroicons/react": "2.1.3",
     "@radix-ui/react-avatar": "^1.0.4",
-    "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-slot": "^1.0.2",
     "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "1.0.10",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "lucide-react": "0.365.0",
     "next": "14.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sharp": "^0.33.3",
     "tailwind-merge": "^2.2.2",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.3",
     "tailwindcss-animate": "^1.0.7"
   },
-  "private": true,
-  "scripts": {
-    "dev": "next dev -p 3030 --turbo",
-    "build": "next build",
-    "start": "next start -p 3030",
-    "prettier": "prettier --write --ignore-unknown .",
-    "prettier:check": "prettier --check --ignore-unknown .",
-    "lint": "next lint",
-    "prepare": "husky"
-  },
   "devDependencies": {
-    "@types/node": "^20.11.30",
-    "@types/react": "18.2.72",
+    "@types/node": "^20.12.5",
+    "@types/react": "18.2.74",
     "@vercel/style-guide": "^6.0.0",
     "autoprefixer": "10.4.19",
-    "eslint": "8.57.0",
+    "eslint": "9.0.0",
     "eslint-config-next": "14.1.4",
     "husky": "^9.0.11",
     "postcss": "8.4.38",
     "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.12",
-    "typescript": "^5.4.3"
+    "prettier-plugin-tailwindcss": "^0.5.13",
+    "typescript": "^5.4.4"
   }
 }

@@ -1,14 +1,15 @@
-import Projects from "@/components/Projects/Projects";
+import Projects from '@/components/Projects/Projects';
+
+import { type Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Project',
+};
 
 export default function ProjectPage() {
   return (
-    <div className="base px-4 py-8">
-      <div className="text-center">
-        <h1 className="text-2xl md:text-4xl">Projects</h1>
-      </div>
-      <div className="mt-10">
-        <Projects />
-      </div>
+    <div className="px-4 py-8">
+      <Projects />
     </div>
   );
 }

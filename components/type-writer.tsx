@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 interface TypewriterProps {
   text: string;
@@ -13,7 +13,7 @@ const Typewriter: React.FC<TypewriterProps> = ({
   className,
   delay = 50,
 }) => {
-  const [displayText, setDisplayText] = useState("");
+  const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
