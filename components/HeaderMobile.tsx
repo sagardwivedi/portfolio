@@ -1,12 +1,13 @@
 'use client';
 
-import { MenuSquareIcon, XIcon } from 'lucide-react';
+import { MenuIcon, XIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
+import { Each, Show, ShowWhen } from 'sagar-utility-components';
 
+import { Button } from '@/components/ui/button';
 import { navs } from '@/lib/constantData';
 import { cn } from '@/lib/utils';
-import { Button } from './ui/button';
 
 export function HeaderMobile() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,40 +21,53 @@ export function HeaderMobile() {
         onClick={openMenu}
         size="icon"
         variant="outline"
-        className="rounded md:hidden"
+        className="right-4 top-4 z-50 rounded-full bg-white text-gray-900 md:hidden"
         aria-label="Menu Button"
       >
-        <MenuSquareIcon className="h-6 w-6" />
+        <MenuIcon className="h-6 w-6" />
       </Button>
-      {isOpen && (
-        <div className="absolute inset-0 z-40 min-h-screen bg-black/50" />
-      )}
+      <Show>
+        <ShowWhen isTrue={isOpen}>
+          <div
+            className="fixed inset-0 z-40 bg-black bg-opacity-50"
+            onClick={closeMenu}
+            aria-hidden="true"
+          />
+        </ShowWhen>
+      </Show>
       <div
         className={cn(
-          isOpen
-            ? `block duration-300 ease-in animate-in fade-in-0 slide-in-from-top-10`
-            : `invisible duration-300 ease-out animate-out fade-out-0 slide-out-to-top-10`,
-          'absolute inset-x-0 top-0 z-50 m-4 h-auto items-center justify-center p-5',
+          'fixed inset-x-0 top-0 z-50 w-full transform p-4 transition-all duration-500 ease-in-out',
+          isOpen ? 'translate-y-0' : '-translate-y-full',
         )}
       >
-        <div className="flex flex-col">
+        <div className="rounded-md border border-white/40 bg-gray-950 p-4">
           <div className="flex justify-end">
-            <Button onClick={closeMenu} variant="ghost" size="icon">
+            <Button
+              onClick={closeMenu}
+              variant="ghost"
+              size="icon"
+              className="text-white"
+            >
               <XIcon className="h-6 w-6" />
             </Button>
           </div>
-          {navs.map((nav, index) => (
-            <Button
-              key={index}
-              className="font-sans text-base"
-              asChild
-              variant="link"
-            >
-              <Link onClick={() => setTimeout(closeMenu, 300)} href={nav.href}>
-                {nav.text}
-              </Link>
-            </Button>
-          ))}
+          <nav className="mt-4 flex flex-col">
+            <Each
+              of={navs}
+              render={(nav) => (
+                <Button
+                  key={nav.text}
+                  className="mb-2 font-sans text-base"
+                  asChild
+                  variant="link"
+                  onClick={closeMenu}
+                >
+                  <Link href={nav.href}>{nav.text}</Link>
+                </Button>
+              )}
+            />
+          </nav>
         </div>
       </div>
     </>

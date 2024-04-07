@@ -1,4 +1,3 @@
-import { Badge } from '@/components/ui/badge';
 import {
   Book,
   CheckCircle,
@@ -8,6 +7,8 @@ import {
   Wrench,
 } from 'lucide-react';
 import { type Metadata } from 'next';
+
+import { Badge } from '@/components/ui/badge';
 
 export const metadata: Metadata = {
   title: 'Me',

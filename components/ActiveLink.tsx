@@ -1,10 +1,11 @@
 'use client';
 
-import { cn } from '@/lib/utils';
 import { Route } from 'next';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { UrlObject } from 'url';
+
+import { cn } from '@/lib/utils';
 
 interface ActiveLinkProps {
   href: UrlObject | Route<string>;
@@ -13,15 +14,16 @@ interface ActiveLinkProps {
 
 export default function ActiveLink({ href, text }: ActiveLinkProps) {
   const path = usePathname();
-
   const isActive = path === href;
 
   return (
     <Link
       href={href}
       className={cn(
-        isActive ? 'bg-primary text-primary-foreground' : '',
-        'rounded-2xl p-2 transition-colors duration-300',
+        'inline-block rounded-lg px-4 py-2 transition-colors duration-300',
+        isActive
+          ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-blue-500 hover:to-purple-500'
+          : 'hover:bg-primary',
       )}
       aria-current={isActive ? 'page' : undefined}
     >

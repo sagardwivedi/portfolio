@@ -40,6 +40,9 @@
     @apply border-border;
   }
   body {
-    @apply bg-background p-3 font-sans text-white antialiased md:p-6;
+    @apply bg-background font-sans text-white antialiased md:p-6;
+  }
+  body::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar width */
   }
 }

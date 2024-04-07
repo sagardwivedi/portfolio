@@ -5,7 +5,10 @@ export const projects: Project[] = [
     id: '1',
     title: 'TaskVista',
     description: 'My take on kanban style task management app.',
-    prevImage: '/taskvista.png',
+    prevImage: {
+      src: '/taskvista.png',
+      priority: true,
+    },
     techStack: ['NextJS', 'Supabase', 'TailwidCSS'],
     demoLink: 'https://taskvista.vercel.app/',
     gitRepo: 'https://github.com/sagardwivedi/kanban',
@@ -15,7 +18,9 @@ export const projects: Project[] = [
     id: '2',
     title: 'DevJunction',
     description: 'A fully-functional link-sharing app for developers!',
-    prevImage: '/devjunction.png',
+    prevImage: {
+      src: '/devjunction.png',
+    },
     techStack: ['NextJS', 'TailwindCSS', 'shadcn/ui', 'supabase'],
     demoLink: 'https://devjunction.vercel.app/',
     gitRepo: 'https://github.com/sagardwivedi/devjunction',
@@ -25,7 +30,9 @@ export const projects: Project[] = [
     id: '3',
     title: 'Huddle',
     description: 'A landing page with a single introductory section',
-    prevImage: '/huddle.png',
+    prevImage: {
+      src: '/huddle.png',
+    },
     techStack: ['NextJS', 'TailwindCSS'],
     demoLink: 'https://huddle-three-pi.vercel.app/',
     gitRepo:
@@ -35,7 +42,9 @@ export const projects: Project[] = [
     id: '4',
     title: 'FQuiz',
     description: 'A Frontend Quizz App',
-    prevImage: '/fquizz.png',
+    prevImage: {
+      src: '/fquizz.png',
+    },
     techStack: ['NextJS', 'TailwindCSS', 'shadcn/ui', 'zustand'],
     demoLink: 'https://fquiz-eight.vercel.app/',
     gitRepo: 'https://github.com/sagardwivedi/f-quiz',

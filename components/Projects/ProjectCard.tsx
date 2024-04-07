@@ -19,54 +19,57 @@ export function ProjectCard({
   gitRepo,
 }: ProjectCardProps) {
   return (
-    <div className="flex flex-col overflow-hidden rounded-md bg-black">
-      <Image
-        src={prevImage}
-        alt={title}
-        className="rounded-md"
-        width={700}
-        height={700}
-        loader={customLoader}
-      />
-
-      <div className="flex flex-row flex-wrap items-center justify-between p-5">
-        <div>
-          <div className="flex flex-row items-center gap-2">
-            <h2 className="text-xl font-semibold text-primary md:text-3xl">
-              {title}
-            </h2>
-            {status && <Badge variant={'outline'}>{status}</Badge>}
-          </div>
-          <p className="text-secondary-foreground">{description}</p>
-          <div className="mt-2 flex flex-row flex-wrap gap-2">
-            {techStack.map((i) => (
-              <Badge key={i}>{i}</Badge>
-            ))}
-          </div>
+    <div className="overflow-hidden  rounded-md">
+      <div className="relative h-64 w-full">
+        <Image
+          src={prevImage.src}
+          alt={title}
+          fill
+          className="rounded-t-md object-cover"
+          loader={customLoader}
+          priority={prevImage.priority}
+        />
+      </div>
+      <div className="bg-gray-900 p-6">
+        <div className="flex items-center justify-between">
+          <h2 className="text-2xl font-semibold text-white md:text-3xl">
+            {title}
+          </h2>
+          {status && <Badge>{status}</Badge>}
         </div>
-        <div className="mt-5 flex gap-4">
-          <Button
-            className="group bg-secondary text-secondary-foreground"
-            asChild
-            variant={'link'}
-          >
-            <Link href={demoLink}>
-              Live
-              <ArrowRightIcon className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </Button>
-          <Button
-            className="group bg-primary text-primary-foreground"
-            asChild
-            variant={'link'}
-          >
-            <Link href={gitRepo}>
-              Github
-              <ArrowRightIcon className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </Button>
+        <p className="mt-2 text-gray-200">{description}</p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {techStack.map((tech, index) => (
+            <Badge key={index} variant="secondary" className="text-gray-300">
+              {tech}
+            </Badge>
+          ))}
+        </div>
+        <div className="mt-4 flex space-x-4">
+          <LinkButton link={demoLink} text="Live Demo" />
+          <LinkButton link={gitRepo} text="Github Repo" />
         </div>
       </div>
     </div>
+  );
+}
+
+function LinkButton({ link, text }: { link: string; text: string }) {
+  return (
+    <Button
+      asChild
+      variant="default"
+      className="group rounded-2xl transition-colors duration-300"
+    >
+      <Link
+        href={link}
+        className="flex items-center"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {text}
+        <ArrowRightIcon className="ml-1 h-4 w-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
+      </Link>
+    </Button>
   );
 }

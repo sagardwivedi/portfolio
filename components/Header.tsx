@@ -1,7 +1,7 @@
+import { Logo } from '@/components/ui/logo';
 import { navs } from '@/lib/constantData';
 import ActiveLink from './ActiveLink';
 import { HeaderMobile } from './HeaderMobile';
-import { Logo } from './ui/logo';
 
 export function Header() {
   return (
