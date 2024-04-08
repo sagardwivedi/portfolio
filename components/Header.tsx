@@ -5,7 +5,7 @@ import { HeaderMobile } from './HeaderMobile';
 
 export function Header() {
   return (
-    <header className="mb-6 flex flex-row items-center justify-between pr-4 md:px-5 py-4">
+    <header className="mb-6 flex flex-row items-center justify-between py-4 pr-4 md:px-5">
       <Logo className="max-md:text-2xl" />
       <div className="flex flex-row gap-4 max-md:hidden">
         {navs.map((nav, index) => (
